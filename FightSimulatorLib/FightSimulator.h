@@ -12,10 +12,23 @@
 #include <iostream>
 #include "FightSimulatorHeader.h"
 
-class Test : public ITest
+class FightSimulator : public IFightSimulator
 {
 public:
-    virtual int Add(int num1, int num2);
+    FightSimulator();
+    ~FightSimulator();
+    
+public:
+    
+    virtual void SetTeamList(const FSTeamList &list);
+    virtual const FSTeamList &GetTeamList();
+    
+    virtual void SetTurnList(const FSTurnList &list);
+    virtual const FSTurnList &GetTurnList();
+    
+private:
+    FSTeamList teamList;
+    FSTurnList turnList;
 };
 
 #endif /* defined(__FightSimulatorLib__FightSimulator__) */

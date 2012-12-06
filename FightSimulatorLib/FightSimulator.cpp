@@ -8,18 +8,40 @@
 
 #include "FightSimulator.h"
 
-int Test::Add(int num1, int num2)
+FightSimulator::FightSimulator()
+{}
+
+FightSimulator::~FightSimulator()
+{}
+
+void FightSimulator::SetTeamList(const FSTeamList &list)
 {
-    return num1 + num2;
+    teamList.clear();
+    teamList = list;
 }
 
-
-extern "C" ITest* CreateTest()
+const FSTeamList &FightSimulator::GetTeamList()
 {
-    return new Test();
+    return teamList;
 }
 
-extern "C" void DeleteTest(ITest* pTest)
+void FightSimulator::SetTurnList(const FSTurnList &list)
 {
-    delete static_cast<Test *>(pTest);
+    turnList.clear();
+    turnList = list;
+}
+
+const FSTurnList &FightSimulator::GetTurnList()
+{
+    return turnList;
+}
+
+extern "C" IFightSimulator* CreateFightSimulator()
+{
+    return new FightSimulator();
+}
+
+extern "C" void DeleteFightSimulator(IFightSimulator* pFightSimulator)
+{
+    delete static_cast<FightSimulator *>(pFightSimulator);
 }

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		27A7DDC4167075490010AE82 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27A7DDC3167075490010AE82 /* main.cpp */; };
+		27A7DDC6167075490010AE82 /* FightSimulatorConsole.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 27A7DDC5167075490010AE82 /* FightSimulatorConsole.1 */; };
+		27A7DDCB167075880010AE82 /* libFightSimulatorLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 27CF47F7166F241300DCE981 /* libFightSimulatorLib.a */; };
 		27CF4800166F24D700DCE981 /* FightSimulator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27CF47FE166F24D700DCE981 /* FightSimulator.cpp */; };
 		27CF4801166F24D700DCE981 /* FightSimulator.h in Headers */ = {isa = PBXBuildFile; fileRef = 27CF47FF166F24D700DCE981 /* FightSimulator.h */; };
 		27CF480A166F2A6F00DCE981 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27CF4809166F2A6F00DCE981 /* SenTestingKit.framework */; };
@@ -16,7 +19,23 @@
 		27CF481E166F2A8000DCE981 /* libFightSimulatorLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 27CF47F7166F241300DCE981 /* libFightSimulatorLib.a */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		27A7DDBE167075490010AE82 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				27A7DDC6167075490010AE82 /* FightSimulatorConsole.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		27A7DDC0167075490010AE82 /* FightSimulatorConsole */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = FightSimulatorConsole; sourceTree = BUILT_PRODUCTS_DIR; };
+		27A7DDC3167075490010AE82 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		27A7DDC5167075490010AE82 /* FightSimulatorConsole.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = FightSimulatorConsole.1; sourceTree = "<group>"; };
 		27CF47F7166F241300DCE981 /* libFightSimulatorLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFightSimulatorLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		27CF47FD166F249F00DCE981 /* FightSimulatorHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FightSimulatorHeader.h; sourceTree = "<group>"; };
 		27CF47FE166F24D700DCE981 /* FightSimulator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FightSimulator.cpp; sourceTree = "<group>"; };
@@ -35,6 +54,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		27A7DDBD167075490010AE82 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27A7DDCB167075880010AE82 /* libFightSimulatorLib.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		27CF47F4166F241300DCE981 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -55,11 +82,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		27A7DDC2167075490010AE82 /* FightSimulatorConsole */ = {
+			isa = PBXGroup;
+			children = (
+				27A7DDC3167075490010AE82 /* main.cpp */,
+				27A7DDC5167075490010AE82 /* FightSimulatorConsole.1 */,
+			);
+			path = FightSimulatorConsole;
+			sourceTree = "<group>";
+		};
 		27CF47EA166F239600DCE981 = {
 			isa = PBXGroup;
 			children = (
 				27CF47FC166F245700DCE981 /* FightSimulatorLib */,
 				27CF4811166F2A6F00DCE981 /* FightSimulatorUnitTest */,
+				27A7DDC2167075490010AE82 /* FightSimulatorConsole */,
 				27CF4808166F2A6F00DCE981 /* Frameworks */,
 				27CF47F8166F241300DCE981 /* Products */,
 			);
@@ -70,6 +107,7 @@
 			children = (
 				27CF47F7166F241300DCE981 /* libFightSimulatorLib.a */,
 				27CF4807166F2A6F00DCE981 /* FightSimulatorUnitTest.octest */,
+				27A7DDC0167075490010AE82 /* FightSimulatorConsole */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -138,6 +176,23 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		27A7DDBF167075490010AE82 /* FightSimulatorConsole */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27A7DDC9167075490010AE82 /* Build configuration list for PBXNativeTarget "FightSimulatorConsole" */;
+			buildPhases = (
+				27A7DDBC167075490010AE82 /* Sources */,
+				27A7DDBD167075490010AE82 /* Frameworks */,
+				27A7DDBE167075490010AE82 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FightSimulatorConsole;
+			productName = FightSimulatorConsole;
+			productReference = 27A7DDC0167075490010AE82 /* FightSimulatorConsole */;
+			productType = "com.apple.product-type.tool";
+		};
 		27CF47F6166F241300DCE981 /* FightSimulatorLib */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 27CF47F9166F241300DCE981 /* Build configuration list for PBXNativeTarget "FightSimulatorLib" */;
@@ -195,6 +250,7 @@
 			targets = (
 				27CF47F6166F241300DCE981 /* FightSimulatorLib */,
 				27CF4806166F2A6F00DCE981 /* FightSimulatorUnitTest */,
+				27A7DDBF167075490010AE82 /* FightSimulatorConsole */,
 			);
 		};
 /* End PBXProject section */
@@ -227,6 +283,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		27A7DDBC167075490010AE82 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27A7DDC4167075490010AE82 /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		27CF47F3166F241300DCE981 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -257,6 +321,61 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		27A7DDC7167075490010AE82 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = NO;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		27A7DDC8167075490010AE82 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = NO;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 		27CF47F1166F239600DCE981 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -396,6 +515,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		27A7DDC9167075490010AE82 /* Build configuration list for PBXNativeTarget "FightSimulatorConsole" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27A7DDC7167075490010AE82 /* Debug */,
+				27A7DDC8167075490010AE82 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		27CF47EF166F239600DCE981 /* Build configuration list for PBXProject "FightSimulatorLib" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -412,6 +539,7 @@
 				27CF47FB166F241300DCE981 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		27CF481B166F2A6F00DCE981 /* Build configuration list for PBXNativeTarget "FightSimulatorUnitTest" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +548,7 @@
 				27CF481D166F2A6F00DCE981 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

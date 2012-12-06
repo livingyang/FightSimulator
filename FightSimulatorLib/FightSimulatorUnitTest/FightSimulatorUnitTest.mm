@@ -9,7 +9,7 @@
 #import "FightSimulatorUnitTest.h"
 #import "FightSimulatorHeader.h"
 
-static ITest *pTest = NULL;
+static IFightSimulator *pFightSimulator = NULL;
 
 @implementation FightSimulatorUnitTest
 
@@ -18,23 +18,37 @@ static ITest *pTest = NULL;
     [super setUp];
     
     // Set-up code here.
-    pTest = CreateTest();
+    pFightSimulator = CreateFightSimulator();
 }
 
 - (void)tearDown
 {
     // Tear-down code here.
-    DeleteTest(pTest);
-    pTest = NULL;
+    DeleteFightSimulator(pFightSimulator);
+    pFightSimulator = NULL;
     
     [super tearDown];
 }
 
-- (void)testExample
+- (void)testSetData
 {
-    STAssertTrue(1 == 1, @"");
+    STAssertTrue(pFightSimulator->GetTeamList().size() == 0, @"");
     
-    STAssertTrue(pTest->Add(1, 2) == 3, @"");
+    FSTeam team = {};
+    FSTeamList teamList;
+    teamList.push_back(team);
+    
+    pFightSimulator->SetTeamList(teamList);
+    STAssertTrue(pFightSimulator->GetTeamList().size() == 1, @"");
+    
+    STAssertTrue(pFightSimulator->GetTurnList().size() == 0, @"");
+    
+    FSTurn turn = {};
+    FSTurnList list;
+    list.push_back(turn);
+    
+    pFightSimulator->SetTurnList(list);
+    STAssertTrue(pFightSimulator->GetTurnList().size() == 1, @"");
 }
 
 @end
