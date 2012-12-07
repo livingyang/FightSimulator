@@ -6,6 +6,11 @@
 //
 //
 
+#ifdef WIN32
+#include <windows.h>
+#define sleep(time) Sleep(time)
+#endif
+
 #include <iostream>
 using std::cout;
 using std::endl;
@@ -91,22 +96,25 @@ void printReward(FSReward reward)
 void printFight(IFightSimulator *pFightSimulator)
 {
     // 1 打印队伍信息
-    for (int i = 0; i < pFightSimulator->GetTeamList().size(); ++i)
+    for (unsigned int i = 0; i < pFightSimulator->GetTeamList().size(); ++i)
     {
         cout << "\nTeam " << i + 1 << ":" << endl;
         printTeam(pFightSimulator->GetTeamList()[i]);
     }
+
+	sleep(1000);
     
     // 2 打印回合信息
     cout << "\n战斗开始!!" << endl;
-    for (int i = 0; i < pFightSimulator->GetTurnList().size(); ++i)
+    for (unsigned int i = 0; i < pFightSimulator->GetTurnList().size(); ++i)
     {
         printTurn(pFightSimulator->GetTurnList()[i]);
+		sleep(1000);
     }
     
     // 3 打印战斗结果
     
-    cout << "\n战斗结束" << endl;    for (int i = 0; i < pFightSimulator->GetTeamList().size(); ++i)
+    cout << "\n战斗结束" << endl;    for (unsigned int i = 0; i < pFightSimulator->GetTeamList().size(); ++i)
     {
         FSTeam team = pFightSimulator->GetTeamList()[i];
         
@@ -201,6 +209,7 @@ int main(int argc, const char * argv[])
     
     DeleteFightSimulator(pFightSimulator);
     
+	getchar();
     return 0;
 }
 

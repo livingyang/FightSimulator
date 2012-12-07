@@ -12,9 +12,9 @@
 #include "stdio.h"
 #include <vector>
 
-typedef uint32_t FSRoleId;
-typedef uint32_t FSTeamId;
-typedef uint32_t FSSkillId;
+typedef unsigned int FSRoleId;
+typedef unsigned int FSTeamId;
+typedef unsigned int FSSkillId;
 
 #define INVALID_FSROLE_ID (0)
 #define INVALID_FSTEAM_ID (0)
