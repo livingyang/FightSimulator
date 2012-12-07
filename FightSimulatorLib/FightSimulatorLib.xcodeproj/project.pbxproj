@@ -522,6 +522,7 @@
 				27A7DDC8167075490010AE82 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		27CF47EF166F239600DCE981 /* Build configuration list for PBXProject "FightSimulatorLib" */ = {
 			isa = XCConfigurationList;
