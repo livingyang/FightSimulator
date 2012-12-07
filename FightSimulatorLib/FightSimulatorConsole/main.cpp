@@ -8,7 +8,9 @@
 
 #ifdef WIN32
 #include <windows.h>
-#define sleep(time) Sleep(time)
+#define sleep(time) Sleep(time * 1000)
+#else
+#include "unistd.h"
 #endif
 
 #include <iostream>
@@ -95,6 +97,8 @@ void printReward(FSReward reward)
 
 void printFight(IFightSimulator *pFightSimulator)
 {
+	sleep(1);
+    
     // 1 打印队伍信息
     for (unsigned int i = 0; i < pFightSimulator->GetTeamList().size(); ++i)
     {
@@ -102,18 +106,18 @@ void printFight(IFightSimulator *pFightSimulator)
         printTeam(pFightSimulator->GetTeamList()[i]);
     }
 
-	sleep(1000);
     
     // 2 打印回合信息
     cout << "\n战斗开始!!" << endl;
     for (unsigned int i = 0; i < pFightSimulator->GetTurnList().size(); ++i)
     {
+		sleep(1);
         printTurn(pFightSimulator->GetTurnList()[i]);
-		sleep(1000);
     }
     
     // 3 打印战斗结果
     
+    sleep(1);
     cout << "\n战斗结束" << endl;    for (unsigned int i = 0; i < pFightSimulator->GetTeamList().size(); ++i)
     {
         FSTeam team = pFightSimulator->GetTeamList()[i];
